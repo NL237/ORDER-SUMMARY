@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Order summary card</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+    :root{
+      --Pale-blue: hsl(225, 100%, 94%);
+      --Bright-blue: hsl(245, 75%, 52%);
+      --Very-pale-blue: hsl(225, 100%, 98%);
+      --Desaturated-blue: hsl(224, 23%, 55%);
+      --Dark-blue: hsl(223, 47%, 23%);
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Red Hat Display",sans-serif;
+      background-image: url(images/pattern-background-desktop.svg);
+      background-repeat: no-repeat;
+      background-color: var(--Pale-blue);
+    }
+    #tab{
+      width: 300px;
+      background-color: var(--Very-pale-blue);
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    #tab>img{
+      width: 100%;
+    }
+    #tab .down{
+      padding: 20px;
+    }
+    #tab .down h3{
+      text-align: center;
+      color: var(--Dark-blue);
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+    #tab .down>p{
+      text-align: center;
+      color: var(--Desaturated-blue);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+    #tab .down .plan{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: hsla(225, 100%, 94%, 0.425);
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 14px;
+    }
+    #tab .down .plan img{
+      width: 40px;
+      margin-right: 14px;
+    }
+    #tab .down .plan .leftplan{
+      display: flex;
+      flex-direction: row;
+    }
+    #tab .down .plan .leftplan .ann h4{
+      color: var(--Dark-blue);
+      font-size: 14px;
+      font-weight: 900;
+    }
+    #tab .down .plan .leftplan .ann p{
+      color: var(--Desaturated-blue);
+      font-size: 14px;
+    }
+    #tab .down .plan a{
+      color: var(--Bright-blue);
+      font-size: 13px;
+      text-decoration: underline;
+      font-weight: 900;
+    }
+    .link{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .link button{
+      width: 100%;
+      display: block;
+      background-color: var(--Bright-blue);
+      color: var(--Very-pale-blue);
+      border: 0;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 10px;
+      margin-bottom: 14px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;    }
+    .down .link a{
+      width: 100%;
+      text-decoration: none;
+      text-align: center;
+      color: var(--Desaturated-blue);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    /*Active State*/
+    #tab .down .plan a:hover{
+      color: hsla(223, 40%, 42%, 0.781);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .link button:hover{
+      background-color: hsla(223, 40%, 42%, 0.781);
+      cursor: pointer;
+    }
+    .down .link a:hover{
+      color: var(--Dark-blue);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="tab">
+
+    <img src="images/illustration-hero.svg" alt="">
+
+    <div class="down">
+
+      <h3>Order Summary</h3>
+      <p>You can now listen to millions of songs,
+      audiobooks, and podcasts on any 
+      device anywhere you like!</p>
+
+      <div class="plan">
+        <div class="leftplan">
+          <img src="images/icon-music.svg" alt="">
+          <div class="ann">
+            <h4>Annual Plan</h4>
+            <p>$59.99/year</p>
+          </div>
+        </div>
+        
+        <a href="#">Change</a>
+      </div>
+      <div class="link">
+        <button>Proceed to Payment</button>
+        <a href="#">Cancel Order</a>
+      </div>
+      
+
+    </div>
+  </div>
+
+</body>
+</html>
